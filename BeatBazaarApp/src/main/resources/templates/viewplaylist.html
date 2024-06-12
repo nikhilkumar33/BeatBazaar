@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Beat Bazaar</title>
+<link href="adminpl.css" rel="stylesheet" />
+</head>
+<body>
+	<table border="1">
+
+		<thead>
+			<tr>
+				<th>Playlist Name</th>
+				<th>Playlist Songs</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="pl : ${plist}">
+				<td th:text="${pl.name}"></td>
+				<td>
+					<ul>
+						<li th:each="song : ${pl.song}"><span th:text="${song.name}"></span>
+							<div class="audio-container">
+								<audio controls>
+									<source th:src=${song.link} type="audio/mpeg">
+								</audio>
+							</div></li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+
+	</table>
+</body>
+</html>

@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('backgr2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+label {
+    font-size: 18px;
+    color: #fff; /* Text color */
+}
+
+input[type="text"] {
+    width: calc(100% - 20px); /* Adjust width */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #fff; /* Border color */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark grey background color */
+    color: #fff; /* Text color */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3; /* Button background color */
+    color: #fff; /* Button text color */
+    font-size: 16px;
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    background: linear-gradient(to right, lightgreen, black);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0079f2;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+input[type="submit"]:hover {
+    background-color: #0d47a1; /* Darker shade of blue on hover */
+}
+
+table {
+    width: 90%; /* Set the width of the table to 90% of the container */
+    margin: 20px auto; /* Center the table horizontally with some margin */
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    color: rgba(255, 255, 255, 0.9); /* Text color */
+    text-align: center; /* Center align text */
+}
+
+th {
+    font-size: 25px;
+}
+
+td {
+    font-size: 20px;
+}
+h1 {
+	color: #00ff00;
+	font-size: 50px;
+}

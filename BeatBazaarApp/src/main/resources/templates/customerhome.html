@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beat Bazaar</title>
+<link href="customerhome.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="beatbazaarlogo.png" alt="Beat Bazaar">
+        </div>
+        <div class="app-name">Beat Bazaar</div>
+        <nav>
+        	<a href="/map-custhome">Home</a>
+            <a href="/exploresongs">Explore Songs</a>
+            <div class="dropdown">
+                <a class="dropbtn">More</a>
+                <div class="dropdown-content">
+                    <a href="/logout">Logout</a>
+                    <a href="/deleteaccount">Delete Account</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+    	<h1>Hello, <span th:text="${username}"></span> !</h1>
+        <h1>Welcome to Beat Bazaar Home</h1>
+        <p>Thank you for choosing Beat Bazaar, your ultimate destination for discovering and enjoying your favorite tunes!</p>
+    </main>
+</body>
+</html>

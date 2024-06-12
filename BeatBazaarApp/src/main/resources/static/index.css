@@ -1,0 +1,77 @@
+/* Resetting default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting up basic styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('beatbazaar.jpg'); /* Replace 'home.jpg' with the actual path to your background image */
+    background-size: cover;
+    background-position: inherit;
+    color: #fff; /* Change text color to white for better visibility */
+    position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px; /* Increase margin for better centering */
+    font-size: 48px; /* Increase font size for emphasis */
+    color: rgba(255, 255, 255, 9.5); /* Darken the color and reduce opacity */
+}
+
+.app-name {
+    color: #f8fe07; /* Golden color for the application name */
+}
+
+.slogan {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px; /* Add some space below the slogan */
+    color: rgba(255, 255, 255, 0.9); /* Darken the color and reduce opacity */
+}
+
+.homepage {
+    text-align: center;
+    position: relative; /* Ensure relative positioning for absolute elements */
+    z-index: 1; /* Ensure the links appear above the overlay */
+}
+
+.homepage a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* Ensure relative positioning for absolute elements */
+    z-index: 1; /* Ensure the links appear above the overlay */
+}
+
+.register {
+    background-color: #FF6F61;
+}
+
+.login {
+    background-color: #6A5ACD;
+}
+
+.homepage a:hover {
+    transform: translateY(-3px) scale(1.1); /* Scale up the button on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Increase shadow intensity */
+}
+
+/* Add overlay for better text readability */
+.overlay {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Reduce overlay opacity */
+    z-index: 0; /* Ensure the overlay appears below other elements */
+}

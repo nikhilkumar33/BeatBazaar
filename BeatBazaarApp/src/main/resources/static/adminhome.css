@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('backgr3.jpg'); /* Replace 'home.jpg' with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Change text color to white for better visibility */
+    position: relative;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+        text-align:center;
+    
+}
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, lightgreen, black); /* Use lightgreen and black colors */
+}
+
+
+h1 {
+    color: #fff; /* Header text color */
+    text-align:center;
+}
+
+
+a {
+    color: #fff; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as block element */
+    padding: 10px 20px; /* Add padding */
+    margin: 5px; /* Add margin */
+    background-color: rgba(0, 0, 0, 0.5); /* Background color for links with transparency */
+    border-radius: 5px; /* Add border radius */
+   
+    text-align: center;
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Background color on hover with higher transparency */
+}
+
+form input[type="submit"] {
+    background-color: #f44336; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    margin: 5px; /* Add margin */
+    cursor: pointer; /* Add cursor pointer */
+    border-radius: 5px; /* Add border radius */
+}
+
+form input[type="submit"]:hover {
+    background-color: #d32f2f; /* Button background color on hover */
+}
+.app-name {
+    font-size: 60px;
+    font-weight: bold;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #ff68b4;
+}
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Your existing CSS styles */
+
+
+.logo img {
+    height: 80px; /* Adjust height as needed */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}.form {
+    background-image: url('background7.jpg'); /* Replace 'background7.jpg' with the path to your background image */
+    background-color: rgba(255, 255, 255, 0.5); /* Lighter background color with opacity */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 600px; /* Set maximum width */
+    margin: 60px auto; /* Center the form horizontally and add space between header and form */
+    font-size: 20px;
+}
+
+a {
+    color: #fff; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as block element */
+    padding: 10px 20px; /* Add padding */
+    margin: 5px; /* Add margin */
+    background-color: rgba(0, 0, 0, 0.5); /* Background color for links with transparency */
+    border-radius: 5px; /* Add border radius */
+    text-align: center;
+}
+
+a:hover {
+    background-color: rgba(180, 230, 230, 0.7); /* Background color on hover with higher transparency */
+}

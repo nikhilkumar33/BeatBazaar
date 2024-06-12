@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Beat Bazaar</title>
+<link href="register.css" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="form-wrapper sign-in">
+			<form action="/register" method="post">
+				<h5>Email Id is already exist. Please try again...</h5>
+				<h2>Register</h2>
+				<div class="input-group">
+					<label>User Name: </label> <input type="text" name="username"
+						required>
+				</div>
+
+				<div class="input-group">
+					<label>Email Id: </label> <input type="email" name="email" required>
+				</div>
+
+				<div class="input-group">
+					<label>Password: </label> <input type="password" name="password"
+						required>
+
+				</div>
+				<div class="radios-group">
+					<label>Gender: </label> <br> <input type="radio"
+						name="gender" value="male" required /> <label>Male</label> <input
+						type="radio" name="gender" value="female" /> <label>Female</label>
+					<input type="radio" name="gender" value="other" /> <label>Other</label>
+				</div>
+				<div class="radios-group">
+					<label>Role: </label> <br> <input type="radio" name="role"
+						value="admin" required> <label>Admin</label> <input
+						type="radio" name="role" value="customer"> <label>Customer
+					</label>
+				</div>
+				<div class="input-group">
+					<label>Address : </label>
+					<textarea name="address" required></textarea>
+				</div>
+				<div class="input-group">
+					<label>Pet Name : </label> <input type="text" name="petname"
+						placeholder="when you forgot your password" required />
+				</div>
+				<button type="submit" class="btn">Register</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

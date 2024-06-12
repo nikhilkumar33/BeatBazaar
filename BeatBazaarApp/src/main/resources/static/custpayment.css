@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background7.jpg'); /* Replace 'your-background-image.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px; /* Set maximum width for the content */
+    margin: 50px auto; /* Center the content vertically and horizontally */
+    padding: 20px;
+    background-color: #fff; /* Set background color for the container */
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+h2 {
+    color: #333; /* Set heading text color */
+}
+
+h3 {
+    color: #666; /* Set subheading text color */
+}
+
+p {
+    color: #444; /* Set paragraph text color */
+    line-height: 1.6; /* Set line height for better readability */
+}
+
+button.buy-button {
+    background-color: #ff4d4d; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.buy-button:hover {
+    background-color: #ff3333; /* Change button background color on hover */
+}

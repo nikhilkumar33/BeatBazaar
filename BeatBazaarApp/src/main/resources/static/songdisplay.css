@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, 
+        violet, indigo, blue, green, yellow, orange, red); /* Rainbow background gradient */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background color for the container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333; /* Border color */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background color for the table */
+}
+
+th, td {
+    padding: 10px;
+    text-align: center; /* Center align text */
+    border-bottom: 1px solid #333; /* Border color */
+    color: #fff; /* Text color */
+    font-size: 25px;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.5); /* Header background color */
+    font-size: 30px;
+    color: #0080ff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.3); /* Alternate row background color */
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+audio {
+    width: 100%;
+}
+
+a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust the width and padding of table cells */
+td:nth-child(1), td:nth-child(2), td:nth-child(3) {
+    width: 25%; /* Set the width of name, artist, and genre columns */
+    padding: 10px 5px; /* Adjust padding for better spacing */
+}
+
+td:nth-child(4) {
+    width: 50%; /* Set the width of the audio column */
+    padding: 10px; /* Adjust padding for better spacing */
+}
