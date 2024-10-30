@@ -7,24 +7,34 @@ body, h1, h2, h3, p, ul, li, form {
 /* Setting up basic styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url("background1.jpg");
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center; /* Center the background image */
-    color: #fff; /* Text color */
+    background: linear-gradient(135deg, rgba(255, 46, 99, 0.8), rgba(8, 217, 214, 0.8));
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     position: relative;
     min-height: 100vh;
 }
 
-/* Your existing CSS styles */
-
+/* Updated header */
 header {
-    background: linear-gradient(135deg, #2196f3, #e91e63);
+    background: linear-gradient(135deg, #007acc, #ff68b4); /* Updated gradient colors */
     color: #fff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+/* Your existing CSS styles for logo, nav, and other elements remain unchanged */
+
+main {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Your existing CSS styles for nav and other elements */
 
 /* Your existing CSS styles */
 
@@ -106,4 +116,56 @@ nav a {
 
 nav a:hover {
     background-color: #ff68b4;
+}
+.navigation-links {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background for contrast */
+    border-radius: 15px; /* Rounded corners */
+    margin: 20px auto; /* Center the section */
+    max-width: 900px; /* Limit width */
+    text-align: center; /* Center text */
+}
+
+.link-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Space between items */
+    margin-top: 15px; /* Space above link container */
+}
+
+.link-item {
+    background-color: rgba(255, 255, 255, 0.2); /* Light semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for effects */
+    position: relative; /* For positioning elements */
+}
+
+.link-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+.link-icon {
+    font-size: 50px; /* Larger icon size */
+    display: block; /* Make icon block-level */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.link-title {
+    font-size: 22px; /* Font size for titles */
+    color: #ff68b4; /* Title color */
+    font-weight: bold; /* Bold titles */
+    display: block; /* Make title block-level */
+}
+
+.link-item a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.link-item p {
+    color: #fff; /* Caption color */
+    font-size: 14px; /* Font size for captions */
+    margin-top: 5px; /* Space above captions */
 }
