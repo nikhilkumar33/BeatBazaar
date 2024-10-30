@@ -74,5 +74,12 @@ public class UsersServiceImplementation implements UsersService
 		urepo.deleteById(userid);
 	}
 
+	@Override
+	public String getUsername(String email) {
+		Users user=urepo.findByEmail(email);
+		
+		return user.getUsername();
+	}
+
 	
 }

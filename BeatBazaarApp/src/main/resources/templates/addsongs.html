@@ -19,24 +19,23 @@
                 <a class="dropbtn">Setting</a>
                 <div class="dropdown-content">
                     <a href="/logout">Logout</a>
-                    <a href="/deleteaccount">Delete Account</a>
+                    <a href="/deleteaccount">Delete A/C</a>
                 </div>
             </div>
         </nav>
     </header>
+    <main class="main-content">
 	<form action="/addsongs" method="post">
 		<label>Song Name: </label>
-		<input type="text" name="name" />
-		<br><br>
+		<input type="text" name="name" required/>
 		<label>Song Artist: </label>
-		<input type="text" name="artist" />
-		<br><br>
+		<input type="text" name="artist" required />
 		<label>Song Genre: </label>
-		<input type="text" name="genre" />
-		<br><br><label>Song Link: </label>
-		<input type="text" name="link" />
-		<br><br>
+		<input type="text" name="genre" required />
+		<label>Song Link: </label>
+		<input type="text" name="link" required/>
 		<input type="submit" value="ADD SONG" />
 	</form>
+	</main>
 </body>
 </html>

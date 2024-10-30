@@ -12,20 +12,20 @@
         </div>
         <nav>
         	<a href="/map-adminhome">Home</a>
-        	<a href="/map-songs" >Add Songs</a>
         	<a href="/viewsongs" >View Songs</a>
         	<a href="/viewplaylist">View PlayList</a>
             <div class="dropdown">
                 <a class="dropbtn">Setting</a>
                 <div class="dropdown-content">
                     <a href="/logout">Logout</a>
-                    <a href="/deleteaccount">Delete Account</a>
+                    <a href="/deleteaccount">Delete A/C</a>
                 </div>
             </div>
         </nav>
     </header>
+    <main class="main-content">
 	<form action="/addplaylist" method="post">
-		<label>PlayList Name: </label>
+		<label id="playli">PlayList Name: </label>
 		<input type="text" name="name" required />
 		<div th:each = "song : ${songslist}">
 			
@@ -35,5 +35,6 @@
 		</div>
 		<input type="submit" value="ADD PLAYLIST">
 	</form>
+	</main>
 </body>
 </html>

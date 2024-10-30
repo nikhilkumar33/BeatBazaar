@@ -1,8 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('backgr2.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to bottom right, rgb(8, 217, 214), rgb(37, 42, 52)); /* Gradient background color */
     color: #fff;
     margin: 0;
     padding: 0;
@@ -12,72 +10,32 @@ body {
     height: 100vh;
 }
 
-form {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background color */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-}
-
-label {
-    font-size: 18px;
-    color: #fff; /* Text color */
-}
-
-input[type="text"] {
-    width: calc(100% - 20px); /* Adjust width */
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #fff; /* Border color */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark grey background color */
-    color: #fff; /* Text color */
-}
-
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-input[type="submit"] {
-    width: 100%;
-    padding: 10px 0;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2196f3; /* Button background color */
-    color: #fff; /* Button text color */
-    font-size: 16px;
-    cursor: pointer;
-}
-
 header {
     width: 100%;
-    background: linear-gradient(to right, lightgreen, black);
+    background: linear-gradient(to right, rgb(255, 46, 99), rgb(234, 234, 234)); /* Gradient header background */
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
 
 nav {
     display: flex;
     align-items: center;
 }
-
 nav a {
-    color: #fff;
+    color: black; /* New font color for navigation links */
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #0079f2;
+    background-color: rgb(172, 135, 197); /* New hover background color */
 }
+
 
 .logo img {
     height: 80px;
@@ -91,9 +49,9 @@ nav a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgb(234, 234, 234); /* Light background */
     min-width: 120px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
 }
@@ -103,38 +61,85 @@ nav a:hover {
 }
 
 .dropdown-content a {
-    color: black;
+    color: rgb(37, 42, 52); /* Text color */
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: rgb(255, 46, 99); /* Hover background color */
+}
+
+main.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Take remaining space */
+    padding: 30px; /* Padding for space around content */
+    background: rgba(172, 135, 197, 0.4); /* Very light color from the palette */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    max-width: 600px; /* Set maximum width for content */
+    margin: 20px; /* Margin around the content */
+}
+
+form {
+    max-width: 100%; /* Ensure form fits within the main-content */
+    padding: 50px ;
+    background-color: rgba(255, 229, 229, 0.9); /* Slightly transparent light pink background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+input[type="checkbox"] {
+    margin-right: 10px; /* Adds space between checkbox and label */
+    vertical-align: middle; /* Aligns checkbox vertically with the label */
+}
+
+#playli{
+	display: block;
+    font-size: 40px; /* Font size for labels */
+    color: rgb(37, 42, 52); /* Dark color for text */
+    margin-bottom: 12px; /* Space below labels */
+    display: inline-block; /* Ensures label stays on the same line as checkbox */
+}
+
+label {
+    display: block;
+    font-size: 25px; /* Font size for labels */
+    color: rgb(37, 42, 52); /* Dark color for text */
+    margin-bottom: 12px; /* Space below labels */
+    display: inline-block; /* Ensures label stays on the same line as checkbox */
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Adjust width for padding and border */
+    padding: 10px; /* Padding inside text inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid rgb(117, 106, 182); /* Border color matching palette */
+    background-color: rgba(255, 229, 229, 0.8); /* Light pink background */
+    color: rgb(37, 42, 52); /* Dark text color */
+}
+
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px; /* Padding for the button */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgb(255, 46, 99); /* Button background color */
+    color: #fff; /* Button text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth color transition */
 }
 
 input[type="submit"]:hover {
-    background-color: #0d47a1; /* Darker shade of blue on hover */
+    background-color: rgb(8, 217, 214); /* Darker shade on hover */
 }
 
-table {
-    width: 90%; /* Set the width of the table to 90% of the container */
-    margin: 20px auto; /* Center the table horizontally with some margin */
-    border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background color */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    color: rgba(255, 255, 255, 0.9); /* Text color */
-    text-align: center; /* Center align text */
-}
-
-th {
-    font-size: 25px;
-}
-
-td {
-    font-size: 20px;
-}
 h1 {
-	color: #00ff00;
-	font-size: 50px;
+    color: #008000; /* Header color */
+    font-size: 50px;
 }

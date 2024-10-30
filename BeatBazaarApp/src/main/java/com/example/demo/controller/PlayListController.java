@@ -61,7 +61,14 @@ public class PlayListController
 		model.addAttribute("plist" , plist);
 		return "viewplaylist";
 	}
+	@GetMapping("/viewcustplaylist")
+	public String viewCustomerPlayList(Model model)
+	{
+		List<PlayList> plist = pserv.fetchPlayList();
 	
+		model.addAttribute("plist" , plist);
+		return "viewcustplaylist";
+	}
 	@GetMapping("/createcustplaylist")
 	public String createCustomerPlayList(Model model)
 	{

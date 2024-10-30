@@ -19,13 +19,16 @@
                 <a class="dropbtn">More</a>
                 <div class="dropdown-content">
                     <a href="/logout">Logout</a>
-                    <a href="/deleteaccount">Delete Account</a>
+                    <a href="/deleteaccount">Delete A/C</a>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-    	<h1>Hello, <span th:text="${username}"></span> !</h1>
+    	<h1>Hello, 
+    			<span th:each="user : ${user}"></span>
+    				<span th:text="${user.username}"></span>
+    	!</h1>
         <h1>Welcome to Beat Bazaar Home</h1>
         <p>Thank you for choosing Beat Bazaar, your ultimate destination for discovering and enjoying your favorite tunes!</p>
     </main>

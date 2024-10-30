@@ -18,4 +18,6 @@ public interface UsersService
 
 	public void deleteAccount(String email);
 
+	public String getUsername(String email);
+
 }

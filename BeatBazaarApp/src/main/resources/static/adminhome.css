@@ -1,29 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('backgr3.jpg'); /* Replace 'home.jpg' with the actual path to your background image */
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to bottom right, rgb(8, 217, 214), rgb(37, 42, 52)); /* Gradient background color */
     color: #fff; /* Change text color to white for better visibility */
-    position: relative;
     margin: 0; /* Remove margin */
     padding: 0; /* Remove padding */
-        text-align:center;
-    
+    text-align: center;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
 }
+
 header {
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, lightgreen, black); /* Use lightgreen and black colors */
+    background: linear-gradient(to right, rgb(8, 217, 214), rgb(255, 46, 99)); /* Updated gradient */
+    width: 100%; /* Full width */
+    position: absolute; /* Ensure it stays at the top */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Align to the left of the viewport */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
-
 
 h1 {
-    color: #fff; /* Header text color */
-    text-align:center;
+    color: rgb(8, 217, 214); /* Header text color */
+    text-align: center;
 }
-
 
 a {
     color: #fff; /* Link text color */
@@ -33,7 +37,6 @@ a {
     margin: 5px; /* Add margin */
     background-color: rgba(0, 0, 0, 0.5); /* Background color for links with transparency */
     border-radius: 5px; /* Add border radius */
-   
     text-align: center;
 }
 
@@ -42,7 +45,7 @@ a:hover {
 }
 
 form input[type="submit"] {
-    background-color: #f44336; /* Button background color */
+    background-color: rgb(255, 46, 99); /* Button background color */
     color: white; /* Button text color */
     border: none; /* Remove border */
     padding: 10px 20px; /* Add padding */
@@ -52,12 +55,14 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #d32f2f; /* Button background color on hover */
+    background-color: rgb(8, 217, 214); /* Button background color on hover */
 }
+
 .app-name {
     font-size: 60px;
     font-weight: bold;
 }
+
 nav {
     display: flex;
     align-items: center;
@@ -72,37 +77,11 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ff68b4;
+    background-color: rgb(255, 46, 99);
 }
-header {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Your existing CSS styles */
-
 
 .logo img {
     height: 80px; /* Adjust height as needed */
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #0056b3;
 }
 
 .dropdown {
@@ -131,9 +110,10 @@ nav a:hover {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}.form {
-    background-image: url('background7.jpg'); /* Replace 'background7.jpg' with the path to your background image */
-    background-color: rgba(255, 255, 255, 0.5); /* Lighter background color with opacity */
+}
+
+.form {
+    background-color: rgba(255, 255, 255, 0.3); /* Lighter background color with opacity */
     padding: 30px;
     border-radius: 20px;
     text-align: center;
@@ -142,15 +122,22 @@ nav a:hover {
     font-size: 20px;
 }
 
-a {
-    color: #fff; /* Link text color */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Display as block element */
-    padding: 10px 20px; /* Add padding */
-    margin: 5px; /* Add margin */
-    background-color: rgba(0, 0, 0, 0.5); /* Background color for links with transparency */
-    border-radius: 5px; /* Add border radius */
+.form a {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker transparent background */
+    color: rgb(234, 234, 234); /* Light grey text color */
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 2px solid rgb(234, 234, 234); /* Light grey border */
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     text-align: center;
+    display: inline-block;
+    margin: 15px; /* Add margin between links */
+}
+
+.form a:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+    border-color: #fff; /* Change border color on hover */
 }
 
 a:hover {

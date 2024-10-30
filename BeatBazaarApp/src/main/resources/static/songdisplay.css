@@ -1,71 +1,142 @@
+/* Google Fonts for a modern, elegant look */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, 
-        violet, indigo, blue, green, yellow, orange, red); /* Rainbow background gradient */
+    background: linear-gradient(to right, #f8c291, #e74c3c, #2980b9); /* Warm gradient background */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Ensure header and content are stacked vertically */
+    color: #fff;
+    padding-top: 80px; /* Adjust padding to account for fixed header height */
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background color for the container */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+header {
+    background: linear-gradient(to right, #ff6f61, #d53369, #5f2d91); /* Updated gradient colors */
+    color: #fff; /* White text color */
+    padding: 20px 40px; /* Padding around header */
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center align items vertically */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Align with the left edge of the viewport */
+    right: 0; /* Align with the right edge of the viewport */
+    z-index: 1000; /* Ensure header is on top of other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+header .logo img {
+    height: 60px; /* Logo height */
+    width: auto; /* Auto width to maintain aspect ratio */
+}
+
+header nav {
+    display: flex; /* Display links in a row */
+}
+
+header nav a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 0 15px; /* Horizontal padding for spacing */
+    font-size: 16px; /* Font size for links */
+    font-weight: 500; /* Slightly bolder font weight */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color transition on hover */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+header nav a:hover {
+    color: #ffeb3b; /* Change text color on hover */
+    background-color: #333; /* Dark background on hover */
+}
+
+
+/* Existing styles */
+.table-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+    border-radius: 20px; /* Softer edges */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    overflow: hidden;
+    padding: 20px; /* Inner content padding */
+    backdrop-filter: blur(8px); /* Background blur */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #333; /* Border color */
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background color for the table */
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle table background */
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-th, td {
-    padding: 10px;
-    text-align: center; /* Center align text */
-    border-bottom: 1px solid #333; /* Border color */
-    color: #fff; /* Text color */
-    font-size: 25px;
+.table-heading th {
+    padding: 15px 20px; /* Padding for header cells */
+    font-size: 22px; /* Font size for header cells */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #34495e; /* Dark blue-gray background for header */
+    color: #ecf0f1; /* Light text color */
+    border-bottom: 4px solid #2c3e50; /* Darker border for emphasis */
+    text-align: left; /* Align text to the left in headers */
+    vertical-align: middle; /* Center align text vertically */
+    font-weight: 600; /* Bolder font weight */
 }
 
-th {
-    background-color: rgba(0, 0, 0, 0.5); /* Header background color */
-    font-size: 30px;
-    color: #0080ff;
+.table-body td {
+    padding: 15px 20px; /* Padding for body cells */
+    font-size: 18px; /* Font size for text */
+    text-align: left; /* Align text to the left in body cells */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border between rows */
+    color: #ecf0f1; /* Text color */
+    transition: background 0.3s ease; /* Smooth background transition on hover */
+    vertical-align: middle; /* Center align text vertically */
+}
+
+.table-body tr:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
 }
 
 tbody tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.3); /* Alternate row background color */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly different background for even rows */
 }
 
-.audio-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Additional Styles for Clean, Modern Design */
+h1 {
+    font-size: 42px;
+    color: #f1c40f;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
-audio {
-    width: 100%;
+p {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-a {
-    color: #007bff; /* Link color */
-    text-decoration: none;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table-content {
+        margin: 10px;
+        padding: 15px;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
+    .table-heading th, .table-body td {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 10px; /* Reduced padding for mobile */
+    }
 
-/* Adjust the width and padding of table cells */
-td:nth-child(1), td:nth-child(2), td:nth-child(3) {
-    width: 25%; /* Set the width of name, artist, and genre columns */
-    padding: 10px 5px; /* Adjust padding for better spacing */
-}
-
-td:nth-child(4) {
-    width: 50%; /* Set the width of the audio column */
-    padding: 10px; /* Adjust padding for better spacing */
+    audio {
+        height: 60px; /* Larger controls for smaller screens */
+    }
 }

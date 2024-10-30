@@ -17,7 +17,7 @@ body {
 h1 {
     text-align: center;
     margin-top: 100px; /* Increase margin for better centering */
-    font-size: 48px; /* Increase font size for emphasis */
+    font-size: 65px; /* Increase font size for emphasis */
     color: rgba(255, 255, 255, 9.5); /* Darken the color and reduce opacity */
 }
 
@@ -27,7 +27,7 @@ h1 {
 
 .slogan {
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 30px; /* Add some space below the slogan */
     color: rgba(255, 255, 255, 0.9); /* Darken the color and reduce opacity */
 }

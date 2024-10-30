@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,28 +38,30 @@ public class UsersController
 		
 	}
 	@PostMapping("/login")
-	public String validateUser(@RequestParam String email,@RequestParam String password, HttpSession session)
+	public String validateUser(@RequestParam String email,@RequestParam String password, HttpSession session,Model model)
 	{
+		
 		//invoking validateUser() in service
-		if(userv.validateUser(email, password)==true)
-		{
-			session.setAttribute("email", email);
-			//checking weather the user is admin or customer
-			if(userv.getRole(email).equals("admin"))
-			{
-				
-				return "adminhome";
-			}
-			else
-			{
-				return "customerhome";
-			}
+				if(userv.validateUser(email, password)==true)
+				{
+					session.setAttribute("email", email);
+					//checking weather the user is admin or customer
+					if(userv.getRole(email).equals("admin"))
+					{
+						return "adminhome";
+					}
+					else
+					{
+						Users user = userv.getUser(email);
+						model.addAttribute("user", user);
+						return "customerhome";
+					}
 
-		}
-		else
-		{
-			return "loginfail";
-		}
+				}
+				else
+				{
+					return "loginfail";
+				}
 	}
 	@GetMapping("/exploresongs")
 	public String exploreSongs(HttpSession session)
@@ -111,16 +114,6 @@ public class UsersController
 		}
 	}
 	
-	
-	@ModelAttribute("username")
-	public String currentUser(HttpSession session) {
-	    String email = (String) session.getAttribute("email");
-	    if(email != null) {
-	        Users user = userv.getUser(email);
-	        return user.getUsername();
-	    }
-	    return null; // Return null if user is not logged in
-	}
 	
 	@GetMapping("/deleteaccount")
 	public String deleteAccount(HttpSession session)

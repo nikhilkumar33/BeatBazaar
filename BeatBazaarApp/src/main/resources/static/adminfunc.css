@@ -1,10 +1,6 @@
-/* External CSS for admin functionality */
-
 body {
     font-family: Arial, sans-serif;
-    background-image: url('backgr2.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to bottom right, rgb(37, 42, 52), rgb(8, 217, 214)); /* Gradient background using different palette colors */
     color: #fff;
     margin: 0;
     padding: 0;
@@ -12,16 +8,18 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    box-sizing: border-box;
 }
 
 header {
     width: 100%;
-    background: linear-gradient(to right, lightgreen, black);
+    background: linear-gradient(to right, rgb(255, 46, 99), rgb(8, 217, 214)); /* Different gradient for header */
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 nav {
@@ -32,13 +30,13 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px; /* Increased padding for larger clickable area */
+    border-radius: 6px; /* Slightly larger border radius */
     transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #0079f2;
+    background-color: rgb(37, 42, 52); /* Darker hover background color */
 }
 
 .logo img {
@@ -49,46 +47,57 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    margin-top: 20px;
+    flex-grow: 1; /* Ensure it takes up the remaining space */
 }
 
 form {
-     background-image: url('background4.jpg'); /* Replace 'background7.jpg' with the path to your background image */
-    padding: 30px;
-    border-radius: 20px;
+    background-color: rgba(255, 229, 229, 0.95); /* Slightly more opaque background */
+    padding: 40px; /* Increased padding for more spacious layout */
+    border-radius: 15px;
     text-align: center;
-    max-width: 600px; /* Set maximum width */
-    margin: 20px auto; /* Center the form horizontally and add space between header and form */
-    font-size: 20px;
+    max-width: 600px;
+    margin: 20px;
+    font-size: 18px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
 }
 
-label {
+h2 {
+    color: rgb(255, 46, 99); /* Header 2 color updated to match palette */
+    margin-top:5px;
+    margin-bottom: 10px; /* Space below header */
     font-size: 18px;
 }
 
+label {
+    display: block;
+    font-size: 18px;
+    color: #000; 
+    margin-bottom: 10px; /* Increased space between label and input */
+}
+
 input[type="text"] {
-    width: 250px;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    border: none;
+    width: calc(100% - 24px); /* Full width minus padding and border */
+    padding: 14px; /* Increased padding for better input field appearance */
+    margin-bottom: 20px; /* Increased space between input fields */
+    border-radius: 6px; /* Slightly larger border radius */
+    border: 1px solid #ccc;
     background-color: #fff;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 14px 30px; /* Larger padding for submit button */
     border: none;
-    border-radius: 5px;
-    background-color: #2196f3;
+    border-radius: 6px;
+    background-color: rgb(8, 217, 214);
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #0d47a1;
+    background-color: rgb(37, 42, 52); /* Button hover color */
 }
 
 /* Dropdown menu styles */
@@ -102,10 +111,10 @@ input[type="submit"]:hover {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    min-width: 160px; /* Wider dropdown menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border-radius: 5px;
+    border-radius: 6px; /* Larger border radius */
 }
 
 .dropdown:hover .dropdown-content {
@@ -113,8 +122,8 @@ input[type="submit"]:hover {
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    color: #333;
+    padding: 14px 20px; /* Increased padding for better usability */
     text-decoration: none;
     display: block;
 }
@@ -122,14 +131,11 @@ input[type="submit"]:hover {
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
-h2 {
-	text-align: center;
-	 color: rgb(350, 0, 0);
-	  font-size: 25px;
-}
+
 h1 {
-	font-size: 40px;
-    color: #56f939;
+    font-size: 40px;
+    color: #00e100; /* Header text color using palette colors */
     position: fixed;
     top: 150px;
 }
+

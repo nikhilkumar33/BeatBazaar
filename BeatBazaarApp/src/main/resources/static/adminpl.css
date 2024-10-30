@@ -1,75 +1,136 @@
+/* Google Fonts for a modern, elegant look */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('backgr2.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, #f8c291, #e74c3c, #2980b9); /* Warm gradient background */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, 
-        violet, indigo, blue, green, yellow, orange, red); /* Rainbow background gradient */
+    flex-direction: column; /* Ensure header and content are stacked vertically */
+    color: #fff;
+    padding-top: 80px; /* Adjust padding to account for fixed header height */
 }
 
-form {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent rainbow background color */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+header {
+    background: linear-gradient(to right, #ff6f61, #d53369, #5f2d91); /* Gradient colors */
+    color: #fff; /* White text color */
+    padding: 20px 40px; /* Padding around header */
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center align items vertically */
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Align with the left edge of the viewport */
+    right: 0; /* Align with the right edge of the viewport */
+    z-index: 1000; /* Ensure header is on top of other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
-label {
-    font-size: 18px;
-    color: #fff; /* Text color */
+header .logo img {
+    height: 60px; /* Logo height */
+    width: auto; /* Auto width to maintain aspect ratio */
 }
 
-input[type="text"] {
-    width: calc(100% - 20px); /* Adjust width */
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #fff; /* Border color */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark grey background color */
-    color: #fff; /* Text color */
+header nav {
+    display: flex; /* Display links in a row */
 }
 
-input[type="checkbox"] {
-    margin-right: 10px;
+header nav a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 0 15px; /* Horizontal padding for spacing */
+    font-size: 16px; /* Font size for links */
+    font-weight: 500; /* Slightly bolder font weight */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color transition on hover */
+    border-radius: 5px; /* Rounded corners for hover effect */
 }
 
-input[type="submit"] {
-    width: 100%;
-    padding: 10px 0;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2196f3; /* Button background color */
-    color: #fff; /* Button text color */
-    font-size: 16px;
-    cursor: pointer;
+header nav a:hover {
+    color: #ffeb3b; /* Change text color on hover */
+    background-color: #333; /* Dark background on hover */
 }
 
-input[type="submit"]:hover {
-    background-color: #0d47a1; /* Darker shade of blue on hover */
-}
 table {
     width: 90%; /* Set the width of the table to 90% of the container */
-    margin: 20px auto; /* Center the table horizontally with some margin */
+    margin: 100px auto; /* Center the table horizontally with some margin, adjust top margin to clear header */
     border-collapse: collapse;
     background-color: rgba(0, 0, 0, 0.5); /* Transparent black background color */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
     color: rgba(255, 255, 255, 0.9); /* Text color */
     text-align: center; /* Center align text */
 }
-th {
-	font-size: 25px;
+
+.table-head th {
+    padding: 15px 20px; /* Padding for header cells */
+    font-size: 22px; /* Font size for header cells */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #34495e; /* Dark blue-gray background for header */
+    color: #ecf0f1; /* Light text color */
+    border-bottom: 4px solid #2c3e50; /* Darker border for emphasis */
+    text-align: left; /* Align text to the left in headers */
+    vertical-align: middle; /* Center align text vertically */
+    font-weight: 600; /* Bolder font weight */
 }
- td 
-{
-	font-size: 20px;
+
+.table-body td {
+    padding: 15px 20px; /* Padding for body cells */
+    text-align: left; /* Align text to the left in body cells */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Light border between rows */
+    color: #ecf0f1; /* Text color */
+    transition: background 0.3s ease; /* Smooth background transition on hover */
+    vertical-align: middle; /* Center align text vertically */
+}
+
+.table-body tr:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly different background for even rows */
+}
+.sngn{
+	    font-size: 18px; /* Font size for text */
+	
+}
+.pln {
+    font-size: 34px; /* Adjust the font size to your preference */
+    font-weight: 900; /* Bolder font weight */
+    color: #f1c40f; /* Bright color for playlist names */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow effect for better visibility */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 10px 0; /* Margin for list items */
+    padding: 10px; /* Padding for list items */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.audio-container {
+    margin-top: 10px; /* Space between song name and audio player */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        margin: 20px auto; /* Adjust margin for smaller screens */
+    }
+
+    .table-head th, .table-body td {
+        font-size: 16px; /* Smaller font size for mobile */
+        padding: 10px; /* Reduced padding for mobile */
+    }
+
+    audio {
+        height: 60px; /* Larger controls for smaller screens */
+    }
 }
