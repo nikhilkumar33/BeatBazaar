@@ -13,16 +13,11 @@
         <nav>
 			<a href="/map-custhome">Home</a>
         	<a href="/customerviewsongs">View Songs</a>
-			<a href="/viewplaylist">View PlayList</a>
-            <div class="dropdown">
-                <a class="dropbtn">More</a>
-                <div class="dropdown-content">
-                    <a href="/logout">Logout</a>
-                    <a href="/deleteaccount">Delete A/C</a>
-                </div>
-            </div>
+			<a href="viewcustplaylist">View PlayList</a>
+            
         </nav>
     </header>
+    <main class="main-content">
 	<form action="/addcustplaylist" method="post">
 		<label>PlayList Name: </label>
 		<input type="text" name="name" required />
@@ -34,5 +29,6 @@
 		</div>
 		<input type="submit" value="ADD PLAYLIST">
 	</form>
+	</main>
 </body>
 </html>

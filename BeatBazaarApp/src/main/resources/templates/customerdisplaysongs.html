@@ -6,8 +6,9 @@
 <link href="songdisplay.css" rel="stylesheet" />
 </head>
 <body>
+<div class="table-content">
 	<table border="1">
-	<thead>
+	<thead class="table-heading">
 		<tr>
 			<th>Name</th>
 			<th>Artist</th>
@@ -15,7 +16,7 @@
 			<th>Link</th>
 		</tr>
 	</thead>
-	<tbody>
+	<tbody class="table-body">
 		<tr th:each = "custsongslist : ${customersongslist}">
 			<td th:text = ${custsongslist.name}></td>
 			<td th:text = ${custsongslist.artist}></td>
@@ -28,5 +29,6 @@
 		</tr>
 	</tbody>			
 	</table>
+	</div>
 </body>
 </html>
