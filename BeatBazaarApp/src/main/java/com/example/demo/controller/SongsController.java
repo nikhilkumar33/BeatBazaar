@@ -10,13 +10,20 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entities.Song;
+import com.example.demo.entities.Users;
 import com.example.demo.services.SongService;
+import com.example.demo.services.UsersService;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class SongsController 
 {
 	@Autowired
 	SongService songserv;
+	
+	@Autowired
+	UsersService userv;
 	
 	@PostMapping("/addsongs")
 	public String addSongs(@ModelAttribute Song song)
@@ -43,10 +50,21 @@ public class SongsController
 	
 	
 	@GetMapping("/customerviewsongs")
-	public String customerViewSongs(Model model)
+	public String customerViewSongs(Model model, HttpSession session)
 	{
-		List<Song> songList = songserv.fetchAllSongs();
-		model.addAttribute("customersongslist", songList);
-		return "customerdisplaysongs";
+		String email = (String) session.getAttribute("email");
+		Users user = userv.getUser(email);
+		boolean userstatus = user.isPremium();
+		if(userstatus==true)
+		{
+			List<Song> songList = songserv.fetchAllSongs();
+			model.addAttribute("customersongslist", songList);
+			return "customerdisplaysongs";
+		}
+		else
+		{
+			return "makepayment";
+		}
+		
 	}
 }
