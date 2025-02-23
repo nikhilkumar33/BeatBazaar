@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .form {
     background-color: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
     padding: 20px;
@@ -27,37 +26,31 @@ a {
     transition: background-color 0.3s ease; /* Add transition effect for smoother hover */
     font-size: 20px; /* Set font size */
 }
-
 a:hover {
     background-color: #4aa0ff; /* Lighter background color on hover with transparency */
 }
-
-
 .logo img {
     height: 80px; /* Adjust height as needed */
 }
-
-nav {
-    display: flex;
-    align-items: center;
+header nav {
+    display: flex; /* Display links in a row */
 }
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+header nav a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 0 15px; /* Horizontal padding for spacing */
+    font-size: 20px; /* Font size for links */
+    font-weight: 500; /* Slightly bolder font weight */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color transition on hover */
+    border-radius: 5px; /* Rounded corners for hover effect */
 }
-
-nav a:hover {
-    background-color: #4aa0ff;
+header nav a:hover {
+    color: #ffeb3b; /* Change text color on hover */
+    background-color: #333; /* Dark background on hover */
 }
-
 .dropdown {
     position: relative;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -66,22 +59,18 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
 .dropdown-content a {
     color: #333;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 header {
     background: linear-gradient(135deg, #2196f3, #e91e63);
     color: #fff;
@@ -90,7 +79,6 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
 .app-name {
     font-size: 60px;
     font-weight: bold;

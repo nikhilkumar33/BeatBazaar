@@ -87,14 +87,24 @@ public class PlayListController
 		
 	}
 	@GetMapping("/createcustplaylist")
-	public String createCustomerPlayList(Model model)
+	public String createCustomerPlayList(Model model, HttpSession session)
 	{
-		//Fetching the songs using song service
-		List<Song> songslist = sserv.fetchAllSongs();
-		//Adding the songs in the model
-		model.addAttribute("songslist", songslist);
-		//sending createplaylist
-		return "createcustplaylist";
+		String email = (String) session.getAttribute("email");
+		Users user = userv.getUser(email);
+		boolean userstatus = user.isPremium();
+		if(userstatus==true)
+		{
+			//Fetching the songs using song service
+			List<Song> songslist = sserv.fetchAllSongs();
+			//Adding the songs in the model
+			model.addAttribute("songslist", songslist);
+			//sending createplaylist
+			return "createcustplaylist";
+		}
+		else
+		{
+			return "makepayment";
+		}
 	}
 	@PostMapping("/addcustplaylist")
 	public String addCustomerPlaylist(@ModelAttribute PlayList playlist)

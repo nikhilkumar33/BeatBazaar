@@ -22,22 +22,25 @@ header {
     box-sizing: border-box;
 }
 
-nav {
-    display: flex;
-    align-items: center;
+header nav {
+    display: flex; /* Display links in a row */
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 25px; /* Increased padding for larger clickable area */
-    border-radius: 6px; /* Slightly larger border radius */
-    transition: background-color 0.3s ease;
+header nav a {
+    color: rgb(0, 0, 0); /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 0 15px; /* Horizontal padding for spacing */
+    font-size: 20px; /* Font size for links */
+    font-weight: 500; /* Slightly bolder font weight */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color transition on hover */
+    border-radius: 5px; /* Rounded corners for hover effect */
 }
 
-nav a:hover {
-    background-color: rgb(37, 42, 52); /* Darker hover background color */
+header nav a:hover {
+    color: #ffeb3b; /* Change text color on hover */
+    background-color: #333; /* Dark background on hover */
 }
+
 
 .logo img {
     height: 80px;
